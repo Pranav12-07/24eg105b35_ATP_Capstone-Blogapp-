@@ -1,0 +1,65 @@
+### authorReq.http
+
+
+### Register User
+POST http://localhost:4000/auth/users
+Content-Type: application/json
+
+{
+    "firstName": "pranav",
+    "lastName":"sai",
+    "email":"pranav@email.com",
+    "password":"pranav",
+    "role":"AUTHOR",
+    "profileImageUrl":"https://example.com/avatars/user.png"
+}
+
+### Author Login
+# @name authorLogin
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "email":"pranav@email.com",
+    "password":"pranav"
+}
+
+
+### Create new article
+# @name createArticle
+POST http://localhost:4000/author-api/article
+Content-Type: application/json
+Authorization: Bearer {{authorLogin.response.body.token}}
+
+{
+    "title":"Article 2 by Author 2",
+    "category":"programming",
+    "content":"test article on programming"
+}
+
+### Read own articles
+GET http://localhost:4000/author-api/articles
+Authorization: Bearer {{authorLogin.response.body.token}}
+
+
+### Update article by author. ## check not workinh
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+Authorization: Bearer {{authorLogin.response.body.token}}
+
+{
+    "articleId":"{{createArticle.response.body.payload._id}}",
+    "title":"Article 1 by Author 1",
+    "category":"AI",
+    "content":"test article on AI and its updated"
+} 
+
+### Delete/restore article by articleId (soft delete)
+PATCH http://localhost:4000/author-api/articles
+Content-Type: application/json
+Authorization: Bearer {{authorLogin.response.body.token}}
+
+{
+    "articleId":"{{createArticle.response.body.payload._id}}",
+    "isArticleActive":true
+}

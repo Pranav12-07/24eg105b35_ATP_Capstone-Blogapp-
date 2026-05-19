@@ -1,0 +1,51 @@
+# Root-level ignores
+.DS_Store
+Thumbs.db
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode/
+.idea/
+*.log
+
+# Backend
+BLOG-BACKEND/node_modules/
+BLOG-BACKEND/.env
+BLOG-BACKEND/.env.local
+BLOG-BACKEND/.env.*.local
+BLOG-BACKEND/.DS_Store
+BLOG-BACKEND/npm-debug.log*
+
+# Frontend
+BLOG-FRONTEND/node_modules/
+BLOG-FRONTEND/dist/
+BLOG-FRONTEND/.env
+BLOG-FRONTEND/.env.local
+BLOG-FRONTEND/.env.*.local
+BLOG-FRONTEND/.DS_Store
+BLOG-FRONTEND/npm-debug.log*
+
+# Editor/temp files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# OS generated files
+.DS_Store
+*.DS_Store
+*.Spotlight-V100
+*.Trashes
+Thumbs.db
+
+# Optional npm cache
+.npm
+
+# IDEs
+.vscode/
+.idea/
+# End of .gitignore

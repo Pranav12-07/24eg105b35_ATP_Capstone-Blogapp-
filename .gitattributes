@@ -1,0 +1,39 @@
+# Normalize line endings for text files
+* text=auto
+
+# Explicit text formats
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.json text
+*.css text
+*.scss text
+*.html text
+*.htm text
+*.md text
+*.yaml text
+*.yml text
+*.xml text
+*.txt text
+*.http text
+*.lock text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tgz binary
+*.eot binary
+*.otf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Git config and lock files should stay exact
+.gitattributes text
