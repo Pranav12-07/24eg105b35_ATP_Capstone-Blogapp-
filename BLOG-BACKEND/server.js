@@ -48,7 +48,7 @@ const allowedOrigins = [
     "http://127.0.0.1:3000",
     "http://127.0.0.1:4173",
     "http://127.0.0.1:5173",
-	"24eg105b35-atp-capstone-blogapp.vercel.app",
+	"https://24eg105b35-atp-capstone-blogapp.vercel.app",
 ].filter(Boolean)
 
 app.use(cors({
